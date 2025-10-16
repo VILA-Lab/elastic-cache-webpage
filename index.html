@@ -121,22 +121,22 @@
         }
 
         .hero-results {
-            background: linear-gradient(135deg, #34495e, #2c3e50);
-            color: white;
+            background: #f8f9fa;
+            color: #2c3e50;
             padding: 60px 0;
             text-align: center;
         }
 
         .hero-title {
-            font-size: 2.5em;
+            font-size: 1.8em;
             margin-bottom: 20px;
-            font-weight: 700;
+            font-weight: 600;
         }
 
         .hero-subtitle {
-            font-size: 1.3em;
+            font-size: 1.1em;
             margin-bottom: 40px;
-            opacity: 0.9;
+            opacity: 0.8;
         }
 
         .results-showcase {
@@ -149,9 +149,11 @@
         .metric-large {
             text-align: center;
             padding: 30px 20px;
-            background: rgba(255, 255, 255, 0.1);
+            background: white;
             border-radius: 15px;
             transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ecf0f1;
         }
 
         .metric-large:hover {
@@ -381,6 +383,7 @@
 
             <!-- Visual Method Overview -->
             <section class="section">
+                <h2>Method Overview</h2>
                 <div class="figure">
                     <img src="static/overview.png" alt="Elastic-Cache Overview">
                 </div>
@@ -393,14 +396,18 @@
                 </div>
             </section>
 
+            <!-- Empirical Analysis -->
+            <section class="section">
+                <h2>Empirical Analysis</h2>
+                <div class="figure">
+                    <img src="static/motivation.png" alt="Motivation Analysis">
+                </div>
+            </section>
+
             <!-- Key Results with Visuals -->
             <section class="section">
                 <h2>Performance Results</h2>
                 
-                <div class="figure">
-                    <img src="static/motivation.png" alt="Motivation Analysis">
-                </div>
-
                 <div class="performance-table">
                     <table>
                         <thead>
