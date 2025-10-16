@@ -196,9 +196,15 @@
 
         .visual-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+            margin: 50px 0;
+        }
+
+        .visual-grid .figure img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .performance-table {
@@ -388,11 +394,8 @@
                     <img src="static/overview.png" alt="Elastic-Cache Overview">
                 </div>
                 
-                <div class="figure">
-                    <img src="static/algo.png" alt="Elastic-Cache Algorithm">
-                    <div class="figure-caption">
-                        <strong>Algorithm:</strong> The Elastic-Cache algorithm showing the complete procedure for adaptive KV cache management in diffusion LLMs.
-                    </div>
+                <div class="figure" style="margin: 30px 0;">
+                    <img src="static/algo.png" alt="Elastic-Cache Algorithm" style="max-width: 60%;">
                 </div>
             </section>
 
