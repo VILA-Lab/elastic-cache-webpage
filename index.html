@@ -120,74 +120,53 @@
             font-weight: 600;
         }
 
-        .abstract {
-            font-size: 1.1em;
-            text-align: justify;
-            max-width: 900px;
-            margin: 0 auto;
-            background: #f8f9fa;
-            padding: 40px;
-            border-radius: 10px;
-            border-left: 5px solid #e74c3c;
-            line-height: 1.8;
+        .hero-results {
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
         }
 
-        .highlights {
+        .hero-title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .results-showcase {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 30px;
             margin: 40px 0;
         }
 
-        .highlight {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: left;
+        .metric-large {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
             transition: transform 0.3s ease;
-            border: 1px solid #ecf0f1;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         }
 
-        .highlight:hover {
+        .metric-large:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
-        .highlight-icon {
-            font-size: 2.5em;
-            margin-bottom: 15px;
+        .metric-value-large {
+            font-size: 3.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
             color: #e74c3c;
         }
 
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin: 40px 0;
-        }
-
-        .metric {
-            text-align: center;
-            padding: 30px 20px;
-            background: linear-gradient(135deg, #34495e, #2c3e50);
-            color: white;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .metric:hover {
-            transform: translateY(-3px);
-        }
-
-        .metric-value {
-            font-size: 2.8em;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-
-        .metric-label {
-            font-size: 0.95em;
+        .metric-label-large {
+            font-size: 1em;
             opacity: 0.9;
             line-height: 1.4;
         }
@@ -213,93 +192,11 @@
             line-height: 1.6;
         }
 
-        .method-overview {
-            background: #f8f9fa;
-            padding: 50px;
-            border-radius: 15px;
-            margin: 50px 0;
-        }
-
-        .method-detail {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            margin: 30px 0;
-            border-left: 4px solid #3498db;
-        }
-
-        .method-steps {
+        .visual-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .step {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .step-number {
-            background: #e74c3c;
-            color: white;
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-bottom: 20px;
-            font-size: 1.2em;
-        }
-
-        .algorithm-box {
-            background: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
-            padding: 25px;
-            margin: 30px 0;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
-            overflow-x: auto;
-        }
-
-        .results-detail {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 30px;
             margin: 40px 0;
-        }
-
-        .result-category {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            border: 1px solid #ecf0f1;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .result-category h4 {
-            color: #e74c3c;
-            margin-bottom: 20px;
-            font-size: 1.3em;
-        }
-
-        .result-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .result-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid #f1f2f6;
-        }
-
-        .result-list li:last-child {
-            border-bottom: none;
         }
 
         .performance-table {
@@ -332,6 +229,75 @@
             background: #f8f9fa;
         }
 
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .highlight {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: left;
+            transition: transform 0.3s ease;
+            border: 1px solid #ecf0f1;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .highlight:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .method-overview {
+            background: #f8f9fa;
+            padding: 50px;
+            border-radius: 15px;
+            margin: 50px 0;
+        }
+
+        .method-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .step {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+            background: #e74c3c;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+
+        .abstract {
+            font-size: 1.1em;
+            text-align: justify;
+            max-width: 900px;
+            margin: 0 auto;
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+            border-left: 5px solid #e74c3c;
+            line-height: 1.8;
+        }
+
         footer {
             background: #2c3e50;
             color: white;
@@ -340,7 +306,7 @@
         }
 
         @media (max-width: 768px) {
-            h1 {
+            h1, .hero-title {
                 font-size: 2em;
             }
 
@@ -349,15 +315,19 @@
                 align-items: center;
             }
 
+            .results-showcase {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .visual-grid {
+                grid-template-columns: 1fr;
+            }
+
             .highlights {
                 grid-template-columns: 1fr;
             }
 
             .method-steps {
-                grid-template-columns: 1fr;
-            }
-
-            .results-detail {
                 grid-template-columns: 1fr;
             }
         }
@@ -378,169 +348,57 @@
             </div>
             <div class="buttons">
                 <a href="#" class="btn primary">Paper</a>
-                <a href="#" class="btn">Code (Coming Soon...)</a>
+                <a href="#" class="btn">Code</a>
             </div>
         </div>
     </header>
 
     <main>
         <div class="container">
-            <section class="section">
-                <h2>Abstract</h2>
-                <div class="abstract">
-                    We study how to adaptively recompute key–value (KV) caches for diffusion large language models (DLMs) to maximize prediction accuracy while minimizing decoding latency. Prior methods' decoders recompute QKV for all tokens at every denoising step and layer, despite KV states changing little across most steps, especially in shallow layers, leading to substantial redundancy. We propose <strong>Elastic-Cache</strong>, a training-free, architecture-agnostic strategy that jointly decides <em>when</em> to refresh (via an attention-aware drift test on the most-attended token) and <em>where</em> to refresh (via a depth-aware schedule that recomputes from a chosen layer onward while reusing shallow-layer caches and off-window MASK caches). Unlike fixed-period schemes, Elastic-Cache performs adaptive, layer-aware cache updates for diffusion LLMs, reducing redundant computation and accelerating decoding with negligible loss in generation quality.
-                </div>
-            </section>
-
-            <section class="section">
-                <h2>Key Contributions</h2>
-                <div class="highlights">
-                    <div class="highlight">
-                        <h3>Attention-Aware Cache Control</h3>
-                        <p>We monitor the most-attended tokens across layers and use their attention pattern changes as indicators for when KV cache updates are needed. This provides a lightweight, adaptive trigger that avoids unnecessary recomputation during stable phases while ensuring timely updates when the model's internal state diverges.</p>
+            <!-- Hero Results Section - Visual First -->
+            <section class="hero-results">
+                <div class="hero-title">Up to 45× Faster Inference</div>
+                <div class="hero-subtitle">With Higher Accuracy Than Baseline</div>
+                <div class="results-showcase">
+                    <div class="metric-large">
+                        <div class="metric-value-large">45.1×</div>
+                        <div class="metric-label-large">Maximum Speedup<br>GSM8K (512 tokens)</div>
                     </div>
-                    <div class="highlight">
-                        <h3>Layer-Aware Refresh Strategy</h3>
-                        <p>Based on the empirical observation that KV drift increases with layer depth, we implement selective refreshing that starts from a boundary layer ℓ* and applies only to deeper layers, while reusing cached representations from shallow layers that have already converged.</p>
+                    <div class="metric-large">
+                        <div class="metric-value-large">8.2×</div>
+                        <div class="metric-label-large">Average Speedup<br>GSM8K (256 tokens)</div>
                     </div>
-                    <div class="highlight">
-                        <h3>Block-wise MASK Caching</h3>
-                        <p>We cache distant MASK tokens outside the active prediction window, as they primarily function as length bias rather than contributing meaningfully to current token predictions. This eliminates redundant computation on tokens with negligible attention weights.</p>
+                    <div class="metric-large">
+                        <div class="metric-value-large">81.35%</div>
+                        <div class="metric-label-large">Accuracy Maintained<br>Same as Baseline</div>
                     </div>
-                    <div class="highlight">
-                        <h3>Training-Free Architecture</h3>
-                        <p>Our approach requires no modifications to existing diffusion LLM architectures or training procedures. It can be applied to any diffusion language model as a plug-and-play acceleration technique with tunable speed-accuracy trade-offs.</p>
+                    <div class="metric-large">
+                        <div class="metric-value-large">5×</div>
+                        <div class="metric-label-large">Code Generation<br>HumanEval</div>
                     </div>
                 </div>
             </section>
 
+            <!-- Visual Method Overview -->
             <section class="section">
-                <h2>Method Details</h2>
-                <div class="method-overview">
-                    <p style="text-align: center; font-size: 1.2em; margin-bottom: 40px; color: #2c3e50;">
-                        Elastic-Cache combines three complementary strategies to minimize redundant computation in diffusion LLM decoding while preserving generation quality.
-                    </p>
-                    
-                    <div class="method-detail">
-                        <h3>1. Sliding Window Decoding & KV Caching</h3>
-                        <p>Instead of processing all tokens at each step, we use a flexible sliding window of size β that moves through the sequence. At step t, we compute attention only for tokens in the sliding window while reusing cached KV pairs for tokens outside this window, significantly reducing computational overhead.</p>
-                    </div>
-
-                    <div class="method-detail">
-                        <h3>2. Attention-Aware KV Cache Update</h3>
-                        <p>We identify the most-attended token at each layer by computing which decoded token receives the highest attention from current predictions. We then monitor changes in attention patterns using cosine similarity. When the similarity falls below a threshold γ, we trigger cache updates starting from that layer.</p>
-                    </div>
-
-                    <div class="method-detail">
-                        <h3>3. Layer-Aware Cache Update Strategy</h3>
-                        <p>Upon detecting significant attention changes, we perform selective cache refresh:</p>
-                        <ul style="margin: 20px 0; padding-left: 30px;">
-                            <li><strong>Shallow layers:</strong> Reuse cached KV pairs as they encode stable local patterns</li>
-                            <li><strong>Deep layers:</strong> Recompute KV pairs to capture evolving semantic dependencies</li>
-                            <li><strong>Off-window tokens:</strong> Maintain block-wise caching for distant MASK tokens</li>
-                        </ul>
-                    </div>
-
-                    <div class="method-steps">
-                        <div class="step">
-                            <div class="step-number">1</div>
-                            <h4>Initialize Cache</h4>
-                            <p>Perform full forward pass on initial masked sequence to establish baseline KV cache and attention patterns for all layers.</p>
-                        </div>
-                        <div class="step">
-                            <div class="step-number">2</div>
-                            <h4>Monitor Most-Attended Tokens</h4>
-                            <p>At each decoding step, identify tokens receiving highest attention and compute their attention pattern changes using cosine similarity.</p>
-                        </div>
-                        <div class="step">
-                            <div class="step-number">3</div>
-                            <h4>Adaptive Cache Refresh</h4>
-                            <p>When attention similarity drops below threshold γ at layer l, trigger selective KV cache updates from layer l+1 onwards while preserving shallow caches.</p>
-                        </div>
-                    </div>
+                <div class="figure">
+                    <img src="static/overview.png" alt="Elastic-Cache Overview">
                 </div>
-
+                
                 <div class="figure">
                     <img src="static/algo.png" alt="Elastic-Cache Algorithm">
                     <div class="figure-caption">
                         <strong>Algorithm:</strong> The Elastic-Cache algorithm showing the complete procedure for adaptive KV cache management in diffusion LLMs.
                     </div>
                 </div>
-
-                <div class="figure">
-                    <img src="static/overview.png" alt="Elastic-Cache Overview">
-                </div>
             </section>
 
+            <!-- Key Results with Visuals -->
             <section class="section">
-                <h2>Experimental Results</h2>
-                <div class="results-grid">
-                    <div class="metric">
-                        <div class="metric-value">45.1×</div>
-                        <div class="metric-label">Maximum Speedup<br>(LLaDA-1.5, GSM8K-512)</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">25.2×</div>
-                        <div class="metric-label">LLaDA Speedup<br>(GSM8K-512)</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">8.7×</div>
-                        <div class="metric-label">Average Speedup<br>(GSM8K-256)</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">5.0×</div>
-                        <div class="metric-label">Code Generation<br>(HumanEval-512)</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">13.4×</div>
-                        <div class="metric-label">MBPP Coding<br>(512 tokens)</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">32.8×</div>
-                        <div class="metric-label">LLaDA-1.5 MBPP<br>(512 tokens)</div>
-                    </div>
-                </div>
-
-                <div class="results-detail">
-                    <div class="result-category">
-                        <h4>Mathematical Reasoning Performance</h4>
-                        <ul class="result-list">
-                            <li><strong>GSM8K (5-shot):</strong> 78.24% accuracy (vs 78.01% baseline) with 8.2× speedup</li>
-                            <li><strong>MATH (4-shot):</strong> 33.14% accuracy (vs 33.58% baseline) with 5.1× speedup</li>
-                            <li><strong>Long sequences (512 tokens):</strong> Up to 45.1× speedup with maintained accuracy</li>
-                            <li><strong>Model agnostic:</strong> Consistent gains across LLaDA, LLaDA-1.5, and LLaDA-V</li>
-                        </ul>
-                    </div>
-
-                    <div class="result-category">
-                        <h4>Code Generation Performance</h4>
-                        <ul class="result-list">
-                            <li><strong>HumanEval (0-shot):</strong> 46.34% accuracy (vs 43.90% baseline) with 5.0× speedup</li>
-                            <li><strong>MBPP (3-shot):</strong> 15.6% accuracy (vs 15.0% baseline) with 13.4× speedup</li>
-                            <li><strong>Accuracy improvement:</strong> Often achieves higher accuracy than baseline</li>
-                            <li><strong>Scalability:</strong> Better relative speedups on longer generation lengths</li>
-                        </ul>
-                    </div>
-
-                    <div class="result-category">
-                        <h4>Multimodal Reasoning</h4>
-                        <ul class="result-list">
-                            <li><strong>MathVista:</strong> 55.9% accuracy with improved throughput (32.3 t/s vs 30.3 t/s)</li>
-                            <li><strong>MathVerse:</strong> 29.19% accuracy with consistent speedup maintenance</li>
-                            <li><strong>Cross-modal:</strong> Demonstrates robustness beyond text-only tasks</li>
-                            <li><strong>Efficiency:</strong> Maintains quality while reducing inference cost</li>
-                        </ul>
-                    </div>
-
-                    <div class="result-category">
-                        <h4>System Characteristics</h4>
-                        <ul class="result-list">
-                            <li><strong>Cache update frequency:</strong> Only 5-20% of steps trigger updates</li>
-                            <li><strong>Memory efficiency:</strong> Significant reduction in KV recomputation</li>
-                            <li><strong>Tunable trade-off:</strong> Threshold γ controls speed vs accuracy balance</li>
-                            <li><strong>Scalability:</strong> Better performance on more accurate base models</li>
-                        </ul>
-                    </div>
+                <h2>Performance Results</h2>
+                
+                <div class="figure">
+                    <img src="static/motivation.png" alt="Motivation Analysis">
                 </div>
 
                 <div class="performance-table">
@@ -600,14 +458,7 @@
                     </table>
                 </div>
 
-                <div class="figure">
-                    <img src="static/motivation.png" alt="Motivation Analysis">
-                </div>
-            </section>
-
-            <section class="section">
-                <h2>Ablation Studies</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; margin: 40px 0;">
+                <div class="visual-grid">
                     <div class="figure">
                         <img src="static/ablation.png" alt="Ablation Study">
                     </div>
@@ -615,25 +466,54 @@
                         <img src="static/result_llada_instruct.png" alt="LLaDA Results">
                     </div>
                 </div>
+            </section>
 
-                <div style="background: #f0f8ff; padding: 40px; border-radius: 12px; margin: 40px 0; border-left: 5px solid #3498db;">
-                    <h3 style="text-align: center; color: #2c3e50; margin-bottom: 25px;">Key Ablation Findings</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
-                        <div>
-                            <h4 style="color: #e74c3c; margin-bottom: 15px;">Threshold Sensitivity</h4>
-                            <ul style="margin: 0; padding-left: 20px;">
-                                <li>γ = 0.8: Maximum throughput with slight accuracy trade-off</li>
-                                <li>γ = 0.9: Optimal balance of speed and accuracy</li>
-                                <li>γ = 0.95: Conservative updates, highest accuracy</li>
-                            </ul>
+            <!-- Key Contributions -->
+            <section class="section">
+                <h2>Key Innovations</h2>
+                <div class="highlights">
+                    <div class="highlight">
+                        <h3>Attention-Aware Cache Control</h3>
+                        <p>Monitor the most-attended tokens across layers and use their attention pattern changes as indicators for when KV cache updates are needed. This provides a lightweight, adaptive trigger that avoids unnecessary recomputation.</p>
+                    </div>
+                    <div class="highlight">
+                        <h3>Layer-Aware Refresh Strategy</h3>
+                        <p>Selective refreshing that starts from a boundary layer and applies only to deeper layers, while reusing cached representations from shallow layers that have already converged.</p>
+                    </div>
+                    <div class="highlight">
+                        <h3>Block-wise MASK Caching</h3>
+                        <p>Cache distant MASK tokens outside the active prediction window, as they primarily function as length bias rather than contributing meaningfully to current token predictions.</p>
+                    </div>
+                    <div class="highlight">
+                        <h3>Training-Free Architecture</h3>
+                        <p>Requires no modifications to existing diffusion LLM architectures or training procedures. Can be applied as a plug-and-play acceleration technique with tunable speed-accuracy trade-offs.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Method Details -->
+            <section class="section">
+                <h2>Method</h2>
+                <div class="method-overview">
+                    <p style="text-align: center; font-size: 1.2em; margin-bottom: 40px; color: #2c3e50;">
+                        Elastic-Cache combines three complementary strategies to minimize redundant computation in diffusion LLM decoding while preserving generation quality.
+                    </p>
+                    
+                    <div class="method-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h4>Sliding Window Decoding</h4>
+                            <p>Use a flexible sliding window that moves through the sequence. Compute attention only for tokens in the sliding window while reusing cached KV pairs for tokens outside this window.</p>
                         </div>
-                        <div>
-                            <h4 style="color: #e74c3c; margin-bottom: 15px;">Scalability Properties</h4>
-                            <ul style="margin: 0; padding-left: 20px;">
-                                <li>Longer sequences show greater relative speedups</li>
-                                <li>More accurate base models benefit more from our approach</li>
-                                <li>Window size β = 16-32 provides optimal performance</li>
-                            </ul>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h4>Attention-Aware Monitoring</h4>
+                            <p>Identify the most-attended token at each layer and monitor changes in attention patterns using cosine similarity. When similarity falls below threshold, trigger cache updates.</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h4>Layer-Aware Updates</h4>
+                            <p>Upon detecting significant attention changes, perform selective cache refresh: reuse shallow layer caches while recomputing deeper layers that capture evolving dependencies.</p>
                         </div>
                     </div>
                 </div>
