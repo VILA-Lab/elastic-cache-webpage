@@ -355,8 +355,8 @@
                 ²VILA Lab, MBZUAI, Abu Dhabi, UAE
             </div>
             <div class="buttons">
-                <a href="#" class="btn primary">Paper</a>
-                <a href="#" class="btn">Code</a>
+                <a href="https://arxiv.org/abs/2510.14973" class="btn primary">📄 Paper</a>
+                <a href="#" class="btn">💻 Code (Coming Soon)</a>
             </div>
         </div>
     </header>
@@ -377,8 +377,8 @@
                         <div class="metric-label-large">Average Speedup<br>GSM8K (256 tokens)</div>
                     </div>
                     <div class="metric-large">
-                        <div class="metric-value-large">81.35%</div>
-                        <div class="metric-label-large">Accuracy Maintained<br>Same as Baseline</div>
+                        <div class="metric-value-large">81.50%</div>
+                        <div class="metric-label-large">Higher Accuracy<br>vs 80.36% Baseline</div>
                     </div>
                     <div class="metric-large">
                         <div class="metric-value-large">5×</div>
@@ -390,20 +390,47 @@
             <!-- Visual Method Overview -->
             <section class="section">
                 <h2>Method Overview</h2>
+                <div style="max-width: 800px; margin: 0 auto; text-align: left; padding: 0 20px; margin-bottom: 40px;">
+                    <p style="font-size: 1.1em; line-height: 1.6;">
+                        Our Elastic-Cache approach introduces a novel adaptive caching strategy for diffusion LLMs that significantly reduces computational overhead while maintaining generation quality. Unlike traditional methods that recompute all key-value pairs at every step, our approach intelligently decides when and where to refresh the cache based on attention dynamics.
+                    </p>
+                </div>
+                
                 <div class="figure">
                     <img src="static/overview.png" alt="Elastic-Cache Overview">
+                    <div class="figure-caption">
+                        Comparison between block-wise decoding and our sliding window approach with layer-aware cache updates.
+                    </div>
+                </div>
+                
+                <div style="max-width: 800px; margin: 40px auto; text-align: left; padding: 0 20px;">
+                    <p style="font-size: 1.1em; line-height: 1.6;">
+                        The algorithm below shows our complete procedure for adaptive KV cache management. The key innovation lies in monitoring attention patterns of the most-attended tokens and triggering selective cache updates only when necessary, starting from deeper layers where changes are most significant.
+                    </p>
                 </div>
                 
                 <div class="figure" style="margin: 30px 0;">
                     <img src="static/algo.png" alt="Elastic-Cache Algorithm" style="max-width: 60%;">
+                    <div class="figure-caption">
+                        The Elastic-Cache algorithm for adaptive KV cache management in diffusion LLMs.
+                    </div>
                 </div>
             </section>
 
             <!-- Empirical Analysis -->
             <section class="section">
                 <h2>Empirical Analysis</h2>
+                <div style="max-width: 800px; margin: 0 auto; text-align: left; padding: 0 20px; margin-bottom: 40px;">
+                    <p style="font-size: 1.1em; line-height: 1.6;">
+                        Our approach is motivated by three key empirical observations about diffusion LLM decoding. First, distant MASK tokens have minimal attention influence on current predictions. Second, KV drift increases with layer depth, suggesting selective refresh strategies. Third, the most-attended tokens exhibit the smallest changes, making them ideal indicators for cache validity.
+                    </p>
+                </div>
+                
                 <div class="figure">
                     <img src="static/motivation.png" alt="Motivation Analysis">
+                    <div class="figure-caption">
+                        Empirical analysis showing attention patterns, layer-wise KV drift, and correlation between attention and state changes.
+                    </div>
                 </div>
             </section>
 
@@ -411,6 +438,12 @@
             <section class="section">
                 <h2>Performance Results</h2>
                 
+                <div style="max-width: 800px; margin: 0 auto; text-align: left; padding: 0 20px; margin-bottom: 40px;">
+                    <p style="font-size: 1.1em; line-height: 1.6;">
+                        Our experimental evaluation demonstrates consistent speedups across multiple diffusion LLM architectures and tasks. We achieve up to 45.1× acceleration while often maintaining or even improving accuracy compared to baseline models. The results show that longer generation lengths benefit more from our approach, indicating excellent scalability properties.
+                    </p>
+                </div>
+
                 <div class="performance-table">
                     <table>
                         <thead>
@@ -468,12 +501,29 @@
                     </table>
                 </div>
 
-                <div class="visual-grid">
-                    <div class="figure">
-                        <img src="static/ablation.png" alt="Ablation Study">
+                <div style="max-width: 800px; margin: 40px auto; text-align: left; padding: 0 20px;">
+                    <p style="font-size: 1.1em; line-height: 1.6;">
+                        The comprehensive LLaDA-Instruct results below show consistent performance across different tasks and generation lengths. Our method scales particularly well with longer sequences, where the benefits of adaptive caching become more pronounced.
+                    </p>
+                </div>
+
+                <div class="figure" style="margin: 40px 0;">
+                    <img src="static/result_llada_instruct.png" alt="LLaDA Results">
+                    <div class="figure-caption">
+                        Comprehensive results on LLaDA-Instruct showing speedups across mathematical reasoning and code generation tasks.
                     </div>
-                    <div class="figure">
-                        <img src="static/result_llada_instruct.png" alt="LLaDA Results">
+                </div>
+
+                <div style="max-width: 800px; margin: 40px auto; text-align: left; padding: 0 20px;">
+                    <p style="font-size: 1.1em; line-height: 1.6;">
+                        Our ablation study reveals the importance of each component and hyperparameter choice. The sliding window mechanism and attention threshold γ provide tunable trade-offs between speed and accuracy, allowing practitioners to optimize for their specific requirements.
+                    </p>
+                </div>
+
+                <div class="figure" style="margin: 40px 0;">
+                    <img src="static/ablation.png" alt="Ablation Study">
+                    <div class="figure-caption">
+                        Ablation study showing the impact of sliding window size and attention threshold on performance.
                     </div>
                 </div>
             </section>
